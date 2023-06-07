@@ -50,64 +50,21 @@ function App() {
             <h6 className="book__publisher">Penguin Classics</h6>
           </div>
         </div>
-        <div className="book">
-          <div className="book__img"></div>
-          <div className="book__info">
-            <h4 className="book__title">Pride and Prejudice</h4>
-            <h5 className="book__author">Jane Austen</h5>
-            <h6 className="book__publisher">Penguin Classics</h6>
-          </div>
-        </div>
-        <div className="book">
-          <div className="book__img"></div>
-          <div className="book__info">
-            <h4 className="book__title">Pride and Prejudice</h4>
-            <h5 className="book__author">Jane Austen</h5>
-            <h6 className="book__publisher">Penguin Classics</h6>
-          </div>
-        </div>
-        <div className="book">
-          <div className="book__img"></div>
-          <div className="book__info">
-            <h4 className="book__title">Pride and Prejudice</h4>
-            <h5 className="book__author">Jane Austen</h5>
-            <h6 className="book__publisher">Penguin Classics</h6>
-          </div>
-        </div>
-        <div className="book">
-          <div className="book__img"></div>
-          <div className="book__info">
-            <h4 className="book__title">Pride and Prejudice</h4>
-            <h5 className="book__author">Jane Austen</h5>
-            <h6 className="book__publisher">Penguin Classics</h6>
-          </div>
-        </div>
-        <div className="book">
-          <div className="book__img"></div>
-          <div className="book__info">
-            <h4 className="book__title">Pride and Prejudice</h4>
-            <h5 className="book__author">Jane Austen</h5>
-            <h6 className="book__publisher">Penguin Classics</h6>
-          </div>
-        </div>
-        <div className="book">
-          <div className="book__img"></div>
-          <div className="book__info">
-            <h4 className="book__title">Pride and Prejudice</h4>
-            <h5 className="book__author">Jane Austen</h5>
-            <h6 className="book__publisher">Penguin Classics</h6>
-          </div>
-        </div>
-        <div className="book">
-          <div className="book__img"></div>
-          <div className="book__info">
-            <h4 className="book__title">Pride and Prejudice</h4>
-            <h5 className="book__author">Jane Austen</h5>
-            <h6 className="book__publisher">Penguin Classics</h6>
-          </div>
-        </div>
       </div>
     </main>
+  );
+}
+
+function Book() {
+  return (
+    <div className="book">
+      <div className="book__img"></div>
+      <div className="book__info">
+        <h4 className="book__title">Pride and Prejudice</h4>
+        <h5 className="book__author">Jane Austen</h5>
+        <h6 className="book__publisher">Penguin Classics</h6>
+      </div>
+    </div>
   );
 }
 

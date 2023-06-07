@@ -63,14 +63,13 @@
 /* Books */
 .books {
   grid-area: books;
-
   display: flex;
   flex-wrap: wrap;
 }
 
 .book {
   width: calc(100% / 3);
-  height: calc(100% / 3);
+  height: fit-content;
   background-color: #eee;
   padding: 0.5rem;
 }
