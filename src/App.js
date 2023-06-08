@@ -2,7 +2,6 @@ import "./App.css";
 import bookData from "./data/books";
 import React from "react";
 import { useState, useEffect } from "react";
-import _ from "lodash";
 
 function App() {
   // State
@@ -128,9 +127,14 @@ function App() {
                   <h4 className="book__info--title bold">{book.title}</h4>
                   <h5 className="book__info--author">{book.author}</h5>
                   <h6 className="book__info--publisher">{book.publisher}</h6>
-                  <p className="book__info--availability">
-                    {book.availability ? "Available" : "Unavailable"}
-                  </p>
+                  <div className="book__info--additional">
+                    <p className="book__info--availability">
+                      {book.availability ? "Available" : "Unavailable"}
+                    </p>
+                    <p className="book__info--security-deposit">
+                      Security Deposit: ${book.deposit}
+                    </p>
+                  </div>
                 </div>
               </div>
             );

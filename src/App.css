@@ -118,11 +118,23 @@
   margin: 0.5rem auto 2rem;
 }
 
+.book__info--additional {
+  margin-top: 0.5rem;
+}
+
+.book__info--title {
+  font-size: 1.1rem;
+}
+
 .book__info--author {
   font-size: 0.9rem;
 }
-.book__info--publisher,
-.book__info--availability {
+.book__info--publisher {
+  font-size: 0.8rem;
+}
+
+.book__info--availability,
+.book__info--security-deposit {
   font-size: 0.8rem;
 }
 
