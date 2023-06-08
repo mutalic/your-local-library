@@ -1,7 +1,13 @@
+/* Utility Styles */
+.bold {
+  font-weight: bold;
+}
+
+/* Grid */
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 5rem 1fr;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 4rem 1fr;
   grid-template-areas:
     "nav nav"
     "side-bar books";
@@ -11,11 +17,13 @@
 /* Nav Bar */
 .nav {
   grid-area: nav;
-  border-bottom: 1px solid gray;
+  z-index: 2;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .nav__title,
@@ -35,7 +43,10 @@
 /* Side Bar */
 .side-bar {
   grid-area: side-bar;
-  border-right: 1px solid gray;
+  z-index: 1;
+  clip-path: inset(0px -10px -10px -10px);
+  /* removes top shadow and prevents overlapping */
+  box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.2);
 }
 
 .side-bar__search--container,
@@ -52,12 +63,17 @@
   padding: 0.8rem;
   border: transparent;
   border-radius: 20px;
-  background-color: #eee;
+  background-color: #f0f2f5;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .checkbox {
-  display: flex;
-  justify-content: space-between;
+  width: 1rem;
+  height: 1rem;
 }
 
 /* Books */
@@ -65,20 +81,41 @@
   grid-area: books;
   display: flex;
   flex-wrap: wrap;
+  padding: 1.5rem 1rem;
+  background-color: #f0f2f5;
 }
 
 .book {
-  width: calc(100% / 3);
+  width: calc(100% / 5);
   height: fit-content;
-  background-color: #eee;
-  padding: 0.5rem;
+  padding: 0 1rem;
 }
 
 .book__img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1.5;
   margin: auto;
-  background-color: white;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.book__info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3rem;
+  margin: 0.5rem auto 2rem;
+}
+
+.book__info--author {
+  font-size: 0.9rem;
+}
+.book__info--publisher,
+.book__info--availability {
+  font-size: 0.8rem;
 }
 
 /* Devices with screen width under 900px */
@@ -92,6 +129,9 @@
       "side-bar"
       "books";
     height: 100vh;
+  }
+  .book {
+    width: calc(100% / 2);
   }
 }
 
