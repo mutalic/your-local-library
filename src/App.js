@@ -129,7 +129,15 @@ function App() {
                   <h6 className="book__info--publisher">{book.publisher}</h6>
                   <div className="book__info--additional">
                     <p className="book__info--availability">
-                      {book.availability ? "Available" : "Unavailable"}
+                      {book.availability ? (
+                        <p style={{ color: "green", fontSize: "0.8rem" }}>
+                          Available
+                        </p>
+                      ) : (
+                        <p style={{ color: "red", fontSize: "0.8rem" }}>
+                          Unavailable
+                        </p>
+                      )}
                     </p>
                     <p className="book__info--security-deposit">
                       Security Deposit: ${book.deposit}
