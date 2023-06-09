@@ -98,6 +98,9 @@
   height: fit-content;
   padding: 0 1rem;
 }
+.book:hover {
+  cursor: pointer;
+}
 
 .book__img {
   width: 100%;

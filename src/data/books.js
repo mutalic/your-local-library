@@ -1,4 +1,4 @@
-let books = [
+let bookList = [
   {
     id: 0,
     title: "Animal Farm",
@@ -141,4 +141,4 @@ let books = [
   },
 ];
 
-export default books;
+export default bookList;
