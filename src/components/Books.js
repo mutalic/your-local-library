@@ -1,6 +1,9 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
-function Books({ books, isEmpty, currentInput }) {
+function Books(props) {
+  const { books, isEmpty, currentInput, setWishList, wishList } = props;
   return (
     <div className="books">
       {isEmpty ? (
@@ -13,6 +16,18 @@ function Books({ books, isEmpty, currentInput }) {
             <div className="book" key={book.id}>
               <div className="book__img">
                 <img src={book.image} alt="book cover" width="100%" />
+                <button
+                  className="btn__add-to-wishlist"
+                  onClick={() => {
+                    let newWishList = [
+                      ...wishList,
+                      { title: book.title, id: book.id },
+                    ];
+                    setWishList(newWishList);
+                  }}
+                >
+                  <FontAwesomeIcon className="icon__heart" icon={faHeart} />
+                </button>
               </div>
               <div className="book__info">
                 <h4 className="book__info--title bold">{book.title}</h4>

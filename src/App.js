@@ -15,6 +15,7 @@ function App() {
   let [isCheckedDeposit, setIsCheckedDeposit] = useState(false);
   let [isEmpty, setIsEmpty] = useState(false);
   let [currentInput, setCurrentInput] = useState("");
+  let [wishList, setWishList] = useState([]);
 
   /* Functions */
   function filterBooks(input) {
@@ -82,8 +83,16 @@ function App() {
           setIsCheckedAvailability={setIsCheckedAvailability}
           isCheckedDeposit={isCheckedDeposit}
           setIsCheckedDeposit={setIsCheckedDeposit}
+          wishList={wishList}
+          setWishList={setWishList}
         />
-        <Books books={books} isEmpty={isEmpty} currentInput={currentInput} />
+        <Books
+          books={books}
+          isEmpty={isEmpty}
+          currentInput={currentInput}
+          wishList={wishList}
+          setWishList={setWishList}
+        />
       </main>
     </>
   );
