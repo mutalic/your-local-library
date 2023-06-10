@@ -19,18 +19,20 @@ function App() {
   /* Functions */
   function filterBooks(input) {
     // Utility Functions
-    function noWhiteSpace(str) {
+    function processString(str) {
       return str.trim().split(" ").join("").toLowerCase();
     }
 
     // 1. Filter by input
-    let regexp = new RegExp(noWhiteSpace(input));
+    let regexp = new RegExp(processString(input));
     let filteredBooks = bookList.filter(function (book) {
-      if (regexp.test(noWhiteSpace(book.title))) {
+      if (regexp.test(processString(book.title))) {
         return true;
       }
-      if (regexp.test(noWhiteSpace(book.author))) {
+      if (regexp.test(processString(book.author))) {
         return true;
+      } else {
+        return false;
       }
     });
 

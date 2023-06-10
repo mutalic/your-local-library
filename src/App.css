@@ -50,7 +50,8 @@
 }
 
 .side-bar__search--container,
-.side-bar__filter--container {
+.side-bar__filter--container,
+.side-bar__wishlist--container {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;

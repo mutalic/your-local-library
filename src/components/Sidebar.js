@@ -11,6 +11,7 @@ function Sidebar({
 }) {
   return (
     <div className="side-bar">
+      {/* Searchbar */}
       <div className="side-bar__search--container bold">
         <label htmlFor="search-input">Booksearch </label>
         <input
@@ -24,10 +25,12 @@ function Sidebar({
           }}
         />
       </div>
+
+      {/* Filter Options */}
       <div className="side-bar__filter">
         <form className="side-bar__filter--container">
           <h3 className="bold">Filter</h3>
-
+          {/* Availability */}
           <div
             className="side-bar__filter--availability checkbox-container"
             onClick={() => {
@@ -42,7 +45,7 @@ function Sidebar({
               checked={isCheckedAvailability}
             />
           </div>
-
+          {/* Security Deposit */}
           <div
             className="side-bar__filter--security-deposit checkbox-container"
             onClick={() => {
@@ -59,8 +62,15 @@ function Sidebar({
           </div>
         </form>
       </div>
+
+      {/* Wishlist */}
+      <div className="side-bar__wishlist--container">
+        <h3 className="bold">Wishlist</h3>
+        <Wishlist />
+      </div>
     </div>
   );
 }
 
+function Wishlist() {}
 export default Sidebar;
