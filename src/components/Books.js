@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Books({ books, isEmpty, currentInput }) {
   return (
@@ -11,7 +10,7 @@ function Books({ books, isEmpty, currentInput }) {
       ) : (
         books.map(function (book) {
           return (
-            <div className="book" id={book.id}>
+            <div className="book" key={book.id}>
               <div className="book__img">
                 <img src={book.image} alt="book cover" width="100%" />
               </div>
@@ -22,13 +21,13 @@ function Books({ books, isEmpty, currentInput }) {
                 <div className="book__info--additional">
                   <p className="book__info--availability">
                     {book.availability ? (
-                      <p style={{ color: "green", fontSize: "0.8rem" }}>
+                      <span style={{ color: "green", fontSize: "0.8rem" }}>
                         Available
-                      </p>
+                      </span>
                     ) : (
-                      <p style={{ color: "red", fontSize: "0.8rem" }}>
+                      <span style={{ color: "red", fontSize: "0.8rem" }}>
                         Unavailable
-                      </p>
+                      </span>
                     )}
                   </p>
                   <p className="book__info--security-deposit">

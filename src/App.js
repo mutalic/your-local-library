@@ -1,9 +1,8 @@
 import "./App.css";
 import React from "react";
 import { useState, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
 // Data
-import bookList from "./data/books";
+import bookList from "./data/bookList";
 // Components
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
@@ -12,18 +11,14 @@ import Books from "./components/Books";
 function App() {
   /* State */
   let [books, setBooks] = useState(bookList);
-  let [isChecked, setIsChecked] = useState(false);
+  let [isCheckedAvailability, setIsCheckedAvailability] = useState(false);
+  let [isCheckedDeposit, setIsCheckedDeposit] = useState(false);
   let [isEmpty, setIsEmpty] = useState(false);
   let [currentInput, setCurrentInput] = useState("");
 
   /* Functions */
   function filterBooks(input) {
     // Utility Functions
-    function filterAvailableBooks(books) {
-      return books.filter(function (book) {
-        return book.availability;
-      });
-    }
     function noWhiteSpace(str) {
       return str.trim().split(" ").join("").toLowerCase();
     }
@@ -39,9 +34,18 @@ function App() {
       }
     });
 
-    // 2. Check state (isChecked)
-    if (isChecked) {
-      filteredBooks = filterAvailableBooks(filteredBooks);
+    // 2. Check state
+    // (1) isCheckedAvailability
+    if (isCheckedAvailability) {
+      filteredBooks = filteredBooks.filter(function (book) {
+        return book.availability;
+      });
+    }
+    // (2) isCheckedDeposit
+    if (isCheckedDeposit) {
+      filteredBooks = filteredBooks.filter(function (book) {
+        return book.deposit === 0;
+      });
     }
 
     // 3. Update state (books)
@@ -60,14 +64,11 @@ function App() {
     } else {
       setIsEmpty(false);
     }
-  }, [isChecked, currentInput]);
+  }, [isCheckedAvailability, currentInput, isCheckedDeposit]);
 
   /* JSX */
   return (
     <>
-      {/* Routes */}
-      <Routes></Routes>
-
       {/* Main Page */}
       <main className="grid-container">
         <Navbar />
@@ -75,8 +76,10 @@ function App() {
           currentInput={currentInput}
           setCurrentInput={setCurrentInput}
           filterBooks={filterBooks}
-          isChecked={isChecked}
-          setIsChecked={setIsChecked}
+          isCheckedAvailability={isCheckedAvailability}
+          setIsCheckedAvailability={setIsCheckedAvailability}
+          isCheckedDeposit={isCheckedDeposit}
+          setIsCheckedDeposit={setIsCheckedDeposit}
         />
         <Books books={books} isEmpty={isEmpty} currentInput={currentInput} />
       </main>

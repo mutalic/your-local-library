@@ -4,8 +4,10 @@ function Sidebar({
   currentInput,
   setCurrentInput,
   filterBooks,
-  isChecked,
-  setIsChecked,
+  isCheckedAvailability,
+  setIsCheckedAvailability,
+  isCheckedDeposit,
+  setIsCheckedDeposit,
 }) {
   return (
     <div className="side-bar">
@@ -25,10 +27,11 @@ function Sidebar({
       <div className="side-bar__filter">
         <form className="side-bar__filter--container">
           <h3 className="bold">Filter</h3>
+
           <div
             className="side-bar__filter--availability checkbox-container"
             onClick={() => {
-              setIsChecked(!isChecked);
+              setIsCheckedAvailability(!isCheckedAvailability);
             }}
           >
             <label htmlFor="filter-availability">Available</label>
@@ -36,15 +39,22 @@ function Sidebar({
               type="checkbox"
               id="filter-availability"
               className="checkbox"
-              checked={isChecked}
+              checked={isCheckedAvailability}
             />
           </div>
-          <div className="side-bar__filter--security-deposit checkbox-container">
-            <label htmlFor="filter-security-deposit">Security Deposit</label>
+
+          <div
+            className="side-bar__filter--security-deposit checkbox-container"
+            onClick={() => {
+              setIsCheckedDeposit(!isCheckedDeposit);
+            }}
+          >
+            <label htmlFor="filter-security-deposit">No Security Deposit</label>
             <input
               type="checkbox"
               id="filter-security-deposit"
               className="checkbox"
+              checked={isCheckedDeposit}
             />
           </div>
         </form>

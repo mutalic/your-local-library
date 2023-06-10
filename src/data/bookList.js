@@ -11,7 +11,7 @@ let bookList = [
       location: "Fayetteville, AR",
     },
     availability: true,
-    deposit: 5,
+    deposit: 0,
   },
   {
     id: 1,
@@ -67,7 +67,7 @@ let bookList = [
       location: "Rogers, AR",
     },
     availability: true,
-    deposit: 5,
+    deposit: 0,
   },
   {
     id: 5,
@@ -95,7 +95,7 @@ let bookList = [
       location: "Fayetteville, AR",
     },
     availability: true,
-    deposit: 5,
+    deposit: 0,
   },
   {
     id: 7,
