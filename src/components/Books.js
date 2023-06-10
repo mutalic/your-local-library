@@ -3,7 +3,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 function Books(props) {
-  const { books, isEmpty, currentInput, setWishList, wishList } = props;
+  const {
+    books,
+    isEmpty,
+    currentInput,
+    setWishList,
+    wishList,
+    showModal,
+    setShowModal,
+    setCurrentBook,
+  } = props;
   return (
     <div className="books">
       {isEmpty ? (
@@ -13,12 +22,20 @@ function Books(props) {
       ) : (
         books.map(function (book) {
           return (
-            <div className="book" key={book.id}>
+            <div
+              className="book"
+              key={book.id}
+              onClick={(e) => {
+                setShowModal(true);
+                setCurrentBook(book);
+              }}
+            >
               <div className="book__img">
                 <img src={book.image} alt="book cover" width="100%" />
                 <button
                   className="btn__add-to-wishlist"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.stopPropagation();
                     let newWishList = [
                       ...wishList,
                       { title: book.title, id: book.id },

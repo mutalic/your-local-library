@@ -7,6 +7,7 @@ import bookList from "./data/bookList";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Books from "./components/Books";
+import Modal from "./components/Modal";
 
 function App() {
   /* State */
@@ -16,6 +17,8 @@ function App() {
   let [isEmpty, setIsEmpty] = useState(false);
   let [currentInput, setCurrentInput] = useState("");
   let [wishList, setWishList] = useState([]);
+  let [showModal, setShowModal] = useState(false);
+  let [currentBook, setCurrentBook] = useState({});
 
   /* Functions */
   function filterBooks(input) {
@@ -71,8 +74,13 @@ function App() {
 
   /* JSX */
   return (
-    <>
+    <body>
       {/* Main Page */}
+      {showModal ? (
+        <Modal currentBook={currentBook} setShowModal={setShowModal} />
+      ) : (
+        <></>
+      )}
       <main className="grid-container">
         <Navbar />
         <Sidebar
@@ -92,9 +100,12 @@ function App() {
           currentInput={currentInput}
           wishList={wishList}
           setWishList={setWishList}
+          showModal={showModal}
+          setShowModal={setShowModal}
+          setCurrentBook={setCurrentBook}
         />
       </main>
-    </>
+    </body>
   );
 }
 
