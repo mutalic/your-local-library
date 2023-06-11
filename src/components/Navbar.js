@@ -5,7 +5,9 @@ function Navbar() {
     <div className="nav">
       <h1 className="nav__title">Your Local Library</h1>
       <ul className="nav__menu">
-        <li className="nav__item">Wishlist</li>
+        <a href="#wishlist">
+          <li className="nav__item">Wishlist</li>
+        </a>
         <li className="nav__item">Bookshelf</li>
         <li className="nav__item">Account</li>
       </ul>

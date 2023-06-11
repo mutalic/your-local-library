@@ -9,6 +9,8 @@ let bookList = [
     lender: {
       name: "Thomas Lunsford",
       location: "Fayetteville, AR",
+      recommendation:
+        "This book is about a man who lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi. lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi.",
     },
     availability: true,
     deposit: 0,
@@ -23,6 +25,8 @@ let bookList = [
     lender: {
       name: "Jason Hwang",
       location: "Springdale, AR",
+      recommendation:
+        "This book is about a man who lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi. lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi.",
     },
     availability: false,
     deposit: 7,
@@ -37,6 +41,8 @@ let bookList = [
     lender: {
       name: "Emily Davis",
       location: "Tonitown, AR",
+      recommendation:
+        "This book is about a man who lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi. lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi.",
     },
     availability: true,
     deposit: 4,
@@ -51,6 +57,8 @@ let bookList = [
     lender: {
       name: "Zack White",
       location: "Fayetteville, AR",
+      recommendation:
+        "This book is about a man who lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi. lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi.",
     },
     availability: true,
     deposit: 10,
@@ -65,6 +73,8 @@ let bookList = [
     lender: {
       name: "Zoe Reif",
       location: "Rogers, AR",
+      recommendation:
+        "This book is about a man who lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi. lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi.",
     },
     availability: true,
     deposit: 0,
@@ -79,6 +89,8 @@ let bookList = [
     lender: {
       name: "Patrick Graham",
       location: "Rogers, AR",
+      recommendation:
+        "This book is about a man who lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi. lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi.",
     },
     availability: false,
     deposit: 20,
@@ -93,6 +105,8 @@ let bookList = [
     lender: {
       name: "Aidan Brennan",
       location: "Fayetteville, AR",
+      recommendation:
+        "This book is about a man who lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi. lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi.",
     },
     availability: true,
     deposit: 0,
@@ -107,6 +121,8 @@ let bookList = [
     lender: {
       name: "Jason Hwang",
       location: "Springdale, AR",
+      recommendation:
+        "This book is about a man who lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi. lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi.",
     },
     availability: true,
     deposit: 30,
@@ -121,6 +137,8 @@ let bookList = [
     lender: {
       name: "Jason Hwang",
       location: "Springdale, AR",
+      recommendation:
+        "This book is about a man who lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi. lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi.",
     },
     availability: false,
     deposit: 13,
@@ -135,6 +153,8 @@ let bookList = [
     lender: {
       name: "Kath Reese",
       location: "Fayetteville, AR",
+      recommendation:
+        "This book is about a man who lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi. lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi.",
     },
     availability: true,
     deposit: 21,

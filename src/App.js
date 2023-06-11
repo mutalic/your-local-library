@@ -77,7 +77,12 @@ function App() {
     <body>
       {/* Main Page */}
       {showModal ? (
-        <Modal currentBook={currentBook} setShowModal={setShowModal} />
+        <Modal
+          currentBook={currentBook}
+          setShowModal={setShowModal}
+          wishList={wishList}
+          setWishList={setWishList}
+        />
       ) : (
         <></>
       )}

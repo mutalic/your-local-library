@@ -66,7 +66,7 @@ function Sidebar({
       </div>
 
       {/* Wishlist */}
-      <div className="side-bar__wishlist--container">
+      <div id="wishlist" className="side-bar__wishlist--container">
         <h3 className="bold">Wishlist</h3>
         <div className="side-bar__wishlist">
           {wishList.map(function (book) {
