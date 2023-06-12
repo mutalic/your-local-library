@@ -1,8 +1,5 @@
 /* Nav Bar */
 .nav {
-  grid-area: nav;
-  z-index: 2;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,4 +34,10 @@
 .nav__greetings:hover {
   transform: scale(1.1);
   transition: 0.3s all;
+}
+
+@media only screen and (max-width: 599px) {
+  .nav__menu {
+    display: none;
+  }
 }

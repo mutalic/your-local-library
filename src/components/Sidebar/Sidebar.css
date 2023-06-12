@@ -1,7 +1,5 @@
 /* Side Bar */
 .side-bar {
-  grid-area: side-bar;
-  z-index: 1;
   clip-path: inset(
     0px -10px -10px -10px
   ); /* removes top shadow and prevents overlapping */

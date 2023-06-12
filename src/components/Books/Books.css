@@ -1,0 +1,109 @@
+/* Books */
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.5rem 1rem;
+  background-color: #f0f2f5;
+}
+
+.books__empty {
+  flex-grow: 1;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.book {
+  width: calc(100% / 5);
+  height: fit-content;
+  padding: 0 1rem;
+}
+.book:hover {
+  cursor: pointer;
+}
+
+.book__img {
+  width: 100%;
+  aspect-ratio: 1 / 1.5;
+  margin: auto;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.btn__add-to-wishlist {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  background-color: transparent;
+}
+
+.icon__heart {
+  font-size: 1.3rem;
+  color: #eee;
+}
+.btn__add-to-wishlist:hover,
+.icon__heart:hover {
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+}
+
+.book__info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3rem;
+  margin: 0.5rem auto 2rem;
+}
+
+.book__info--additional {
+  margin-top: 0.5rem;
+}
+
+.book__info--title {
+  font-size: 1.1rem;
+}
+
+.btn__add-to-wishlist {
+  border: 0;
+  font-size: 0.9rem;
+}
+
+.book__info--author {
+  font-size: 0.9rem;
+}
+.book__info--publisher {
+  font-size: 0.8rem;
+}
+
+.book__info--availability,
+.book__info--security-deposit {
+  font-size: 0.8rem;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1199px) {
+  .book {
+    width: calc(100% / 4);
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .book {
+    width: calc(100% / 3);
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .book {
+    width: calc(100% / 2);
+  }
+}

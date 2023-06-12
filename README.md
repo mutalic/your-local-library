@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# About The Project: Your Local Library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is part of a series of my personal portfolio projects.
+It started from the idea of creating an app that would allow people to lend and borrow books to and from others that reside in the area.
+Since this is not an actual app that has users that would generate the dataset needed to access the functionalities, I created an arbitrary dataset "bookList.js" that I used for this project.
 
-## Available Scripts
+## Usage
 
-In the project directory, you can run:
+### 0. Navigation
 
-### `npm start`
+- Your Local Library -- Navigates to top of the page.
+- Booksearch -- Navigates to search bar.
+- Filter -- Navigates to filter options.
+- Wishlist -- Navigates to wishlist.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Booksearch
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The 'Booksearch' field allows the user to search for a book by typing in either the name of the book or the author.
 
-### `npm test`
+### 2. Filter
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The user is able to filter the books by availability and security deposit.
 
-### `npm run build`
+### 3. Wishlist
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+By clicking the heart-shaped button on the top-right of each book image, the user can add the desired book to their wishlist.
+Once added to the wishlist, the book can be removed by clicking the 'remove' button, which is to the right of the book title.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 4. Books
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The user can scroll up and down to look at the books in the area. Basic information (title, author, publisher, availability, security deposit) is displayed under the book cover. When the user clicks on a book, a modal page will appear. This modal page contains information about the lender (name, area, and book description) and will provide an option to "request lender" to borrow the book. The user can close the modal by either clicking the 'close' button or by clicking anywhere outside of the modal.

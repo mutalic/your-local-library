@@ -101,3 +101,9 @@ body {
   background-color: #000;
   color: #fff;
 }
+
+@media only screen and (max-width: 599px) {
+  .modal-container {
+    display: none;
+  }
+}
