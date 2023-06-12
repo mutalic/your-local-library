@@ -35,12 +35,17 @@ function Books(props) {
                 <button
                   className="btn__add-to-wishlist"
                   onClick={(e) => {
-                    e.stopPropagation();
-                    let newWishList = [
-                      ...wishList,
-                      { title: book.title, id: book.id },
-                    ];
-                    setWishList(newWishList);
+                    e.stopPropagation(); // prevents modal page from opening
+                    let wishListTitles = wishList.map(function (book) {
+                      return book.title;
+                    });
+                    if (!wishListTitles.includes(book.title)) {
+                      let newWishList = [
+                        ...wishList,
+                        { title: book.title, id: book.id },
+                      ];
+                      setWishList(newWishList);
+                    }
                   }}
                 >
                   <FontAwesomeIcon className="icon__heart" icon={faHeart} />
