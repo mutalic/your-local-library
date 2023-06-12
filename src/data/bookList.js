@@ -108,7 +108,7 @@ let bookList = [
       recommendation:
         "This book is about a man who lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi. lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi.",
     },
-    availability: true,
+    availability: false,
     deposit: 0,
   },
   {
@@ -268,7 +268,7 @@ let bookList = [
       recommendation:
         "This book is about a man who lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi. lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ab modi ipsa doloribus expedita culpa. Fugit eius praesentium veniam nisi.",
     },
-    availability: true,
+    availability: false,
     deposit: 0,
   },
   {

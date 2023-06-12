@@ -1,3 +1,4 @@
+import "./Sidebar.css";
 import React from "react";
 
 function Sidebar({
@@ -82,7 +83,7 @@ function Sidebar({
                     id={book.id}
                     onClick={(e) => {
                       let newWishList = wishList.filter(function (book) {
-                        return book.id != e.target.id;
+                        return book.id.toString() !== e.target.id;
                       });
                       setWishList(newWishList);
                     }}
@@ -99,5 +100,4 @@ function Sidebar({
   );
 }
 
-function Wishlist() {}
 export default Sidebar;

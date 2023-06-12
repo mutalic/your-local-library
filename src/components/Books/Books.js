@@ -9,7 +9,6 @@ function Books(props) {
     currentInput,
     setWishList,
     wishList,
-    showModal,
     setShowModal,
     setCurrentBook,
   } = props;

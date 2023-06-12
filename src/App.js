@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 // Data
 import bookList from "./data/bookList";
 // Components
-import Sidebar from "./components/Sidebar";
-import Navbar from "./components/Navbar";
-import Books from "./components/Books";
-import Modal from "./components/Modal";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Navbar from "./components/Navbar/Navbar";
+import Books from "./components/Books/Books";
+import Modal from "./components/Modal/Modal";
 // Utility Functions
 import debounce from "./utility/debounce";
 
@@ -99,7 +99,7 @@ function App() {
       ) : (
         <></>
       )}
-      <main>
+      <main id="home">
         {/* Main Page */}
         <div className="grid-container">
           <Navbar />

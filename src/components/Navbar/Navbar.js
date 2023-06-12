@@ -1,9 +1,10 @@
+import "./Navbar.css";
 import React from "react";
 
 function Navbar() {
   return (
     <div className="nav">
-      <a href="#">
+      <a href="#home">
         <h1 className="nav__title">Your Local Library</h1>
       </a>
       <ul className="nav__menu">
