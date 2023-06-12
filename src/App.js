@@ -93,39 +93,41 @@ function App() {
 
   /* JSX */
   return (
-    <main>
-      {/* Main Page */}
+    <>
       {showModal ? (
         <Modal currentBook={currentBook} setShowModal={setShowModal} />
       ) : (
         <></>
       )}
-      <div className="grid-container">
-        <Navbar />
-        <Sidebar
-          currentInput={currentInput}
-          setCurrentInput={setCurrentInput}
-          filterBooks={filterBooks}
-          isCheckedAvailability={isCheckedAvailability}
-          setIsCheckedAvailability={setIsCheckedAvailability}
-          isCheckedDeposit={isCheckedDeposit}
-          setIsCheckedDeposit={setIsCheckedDeposit}
-          wishList={wishList}
-          setWishList={setWishList}
-          innerWidthX={innerWidthX}
-        />
-        <Books
-          books={books}
-          isEmpty={isEmpty}
-          currentInput={currentInput}
-          wishList={wishList}
-          setWishList={setWishList}
-          showModal={showModal}
-          setShowModal={setShowModal}
-          setCurrentBook={setCurrentBook}
-        />
-      </div>
-    </main>
+      <main>
+        {/* Main Page */}
+        <div className="grid-container">
+          <Navbar />
+          <Sidebar
+            currentInput={currentInput}
+            setCurrentInput={setCurrentInput}
+            filterBooks={filterBooks}
+            isCheckedAvailability={isCheckedAvailability}
+            setIsCheckedAvailability={setIsCheckedAvailability}
+            isCheckedDeposit={isCheckedDeposit}
+            setIsCheckedDeposit={setIsCheckedDeposit}
+            wishList={wishList}
+            setWishList={setWishList}
+            innerWidthX={innerWidthX}
+          />
+          <Books
+            books={books}
+            isEmpty={isEmpty}
+            currentInput={currentInput}
+            wishList={wishList}
+            setWishList={setWishList}
+            showModal={showModal}
+            setShowModal={setShowModal}
+            setCurrentBook={setCurrentBook}
+          />
+        </div>
+      </main>
+    </>
   );
 }
 

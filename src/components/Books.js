@@ -25,7 +25,7 @@ function Books(props) {
             <div
               className="book"
               key={book.id}
-              onClick={(e) => {
+              onClick={() => {
                 setShowModal(true);
                 setCurrentBook(book);
               }}

@@ -3,7 +3,9 @@ import React from "react";
 function Navbar() {
   return (
     <div className="nav">
-      <h1 className="nav__title">Your Local Library</h1>
+      <a href="#">
+        <h1 className="nav__title">Your Local Library</h1>
+      </a>
       <ul className="nav__menu">
         <a href="#booksearch">
           <li className="nav__item">Booksearch</li>
