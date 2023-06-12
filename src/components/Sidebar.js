@@ -67,31 +67,34 @@ function Sidebar({
       </div>
 
       {/* Wishlist */}
-
-      <div id="wishlist" className="side-bar__wishlist--container">
-        <h3 className="bold">Wishlist</h3>
-        <div className="side-bar__wishlist">
-          {wishList.map(function (book) {
-            return (
-              <div className="side-bar__wishlist--book" key={book.id}>
-                <p>{book.title}</p>
-                <button
-                  className="btn__remove-from-wishlist"
-                  id={book.id}
-                  onClick={(e) => {
-                    let newWishList = wishList.filter(function (book) {
-                      return book.id != e.target.id;
-                    });
-                    setWishList(newWishList);
-                  }}
-                >
-                  Remove
-                </button>
-              </div>
-            );
-          })}
+      {innerWidthX < 900 ? (
+        <></>
+      ) : (
+        <div id="wishlist" className="side-bar__wishlist--container">
+          <h3 className="bold">Wishlist</h3>
+          <div className="side-bar__wishlist">
+            {wishList.map(function (book) {
+              return (
+                <div className="side-bar__wishlist--book" key={book.id}>
+                  <p>{book.title}</p>
+                  <button
+                    className="btn__remove-from-wishlist"
+                    id={book.id}
+                    onClick={(e) => {
+                      let newWishList = wishList.filter(function (book) {
+                        return book.id != e.target.id;
+                      });
+                      setWishList(newWishList);
+                    }}
+                  >
+                    Remove
+                  </button>
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
