@@ -8,6 +8,8 @@ import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Books from "./components/Books";
 import Modal from "./components/Modal";
+// Utility Functions
+import debounce from "./utility/debounce";
 
 function App() {
   /* State */
@@ -19,6 +21,7 @@ function App() {
   let [wishList, setWishList] = useState([]);
   let [showModal, setShowModal] = useState(false);
   let [currentBook, setCurrentBook] = useState({});
+  let [innerWidthX, setInnerWidthX] = useState(window.innerWidth);
 
   /* Functions */
   function filterBooks(input) {
@@ -59,7 +62,23 @@ function App() {
   }
 
   /* UseEffect */
+  // 1. Updates state (innerWidthX) whenever page is re-rendered.
+  useEffect(() => {
+    function handleResize() {
+      setInnerWidthX(window.innerWidth);
+    }
+    const debouncedHandleResize = debounce(handleResize, 500);
 
+    window.addEventListener("resize", debouncedHandleResize);
+
+    return window.addEventListener("resize", debouncedHandleResize);
+  });
+
+  /* 2. Calls function 'filterBooks' whenever:
+    (1) Filter options (availability or deposit) are checked.
+    or
+    (2) User input (search bar) is generated.
+  */
   useEffect(() => {
     // Filter search results according to user input & filter option (availability).
     filterBooks(currentInput);
@@ -74,19 +93,14 @@ function App() {
 
   /* JSX */
   return (
-    <body>
+    <main>
       {/* Main Page */}
       {showModal ? (
-        <Modal
-          currentBook={currentBook}
-          setShowModal={setShowModal}
-          wishList={wishList}
-          setWishList={setWishList}
-        />
+        <Modal currentBook={currentBook} setShowModal={setShowModal} />
       ) : (
         <></>
       )}
-      <main className="grid-container">
+      <div className="grid-container">
         <Navbar />
         <Sidebar
           currentInput={currentInput}
@@ -98,6 +112,7 @@ function App() {
           setIsCheckedDeposit={setIsCheckedDeposit}
           wishList={wishList}
           setWishList={setWishList}
+          innerWidthX={innerWidthX}
         />
         <Books
           books={books}
@@ -109,8 +124,8 @@ function App() {
           setShowModal={setShowModal}
           setCurrentBook={setCurrentBook}
         />
-      </main>
-    </body>
+      </div>
+    </main>
   );
 }
 

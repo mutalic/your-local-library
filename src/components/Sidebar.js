@@ -10,6 +10,7 @@ function Sidebar({
   setIsCheckedDeposit,
   wishList,
   setWishList,
+  innerWidthX,
 }) {
   return (
     <div className="side-bar">
@@ -66,6 +67,7 @@ function Sidebar({
       </div>
 
       {/* Wishlist */}
+
       <div id="wishlist" className="side-bar__wishlist--container">
         <h3 className="bold">Wishlist</h3>
         <div className="side-bar__wishlist">

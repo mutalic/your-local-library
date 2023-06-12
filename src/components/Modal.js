@@ -1,6 +1,6 @@
 import React from "react";
 
-function Modal({ currentBook, setShowModal, wishList, setWishList }) {
+function Modal({ currentBook, setShowModal }) {
   return (
     <div
       className="modal-container"
@@ -16,7 +16,7 @@ function Modal({ currentBook, setShowModal, wishList, setWishList }) {
             {currentBook.title} by {currentBook.author}
           </h1>
           <div className="modal__book--img">
-            <img src={currentBook.image} width="20%" />
+            <img src={currentBook.image} alt="book cover" width="20%" />
           </div>
         </div>
         <div className="modal__border"></div>
