@@ -15,7 +15,7 @@ function Sidebar({
   return (
     <div className="side-bar">
       {/* Searchbar */}
-      <div className="side-bar__search--container bold">
+      <div id="booksearch" className="side-bar__search--container bold">
         <label htmlFor="search-input">Booksearch </label>
         <input
           id="search-input"
@@ -30,7 +30,7 @@ function Sidebar({
       </div>
 
       {/* Filter Options */}
-      <div className="side-bar__filter">
+      <div id="filter" className="side-bar__filter">
         <form className="side-bar__filter--container">
           <h3 className="bold">Filter</h3>
           {/* Availability */}

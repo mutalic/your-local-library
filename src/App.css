@@ -84,7 +84,7 @@ body {
   cursor: pointer;
 }
 .modal__btn--borrow {
-  background-color: #0197f6;
+  background-color: #7faef5;
   color: white;
 }
 .modal__btn--close {
@@ -123,6 +123,12 @@ body {
   top: 0;
 }
 
+.nav__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #7faef5;
+}
+
 .nav__title,
 .nav__greetings {
   padding: 0 1rem;
@@ -135,6 +141,11 @@ body {
   column-gap: 1rem;
 
   padding: 0 3rem;
+}
+
+.nav__greetings:hover {
+  transform: scale(1.1);
+  transition: 0.3s all;
 }
 
 /* Side Bar */
@@ -198,7 +209,7 @@ body {
 .btn__remove-from-wishlist {
   border: transparent;
   border-radius: 3px;
-  background-color: rgb(102, 102, 164);
+  background-color: #7faef5;
   color: white;
   font-size: 0.7rem;
   padding: 0.5rem;
@@ -299,8 +310,14 @@ body {
   font-size: 0.8rem;
 }
 
+@media only screen and (max-width: 1199px) {
+  .book {
+    width: calc(100% / 4);
+  }
+}
+
 /* Devices with screen width under 900px */
-@media only screen and (max-width: 899px) {
+@media only screen and (max-width: 999px) {
   .grid-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -312,11 +329,14 @@ body {
     height: 100vh;
   }
   .book {
-    width: calc(100% / 2);
+    width: calc(100% / 3);
   }
 }
 
 @media only screen and (max-width: 599px) {
+  .book {
+    width: calc(100% / 2);
+  }
   .nav__menu {
     display: none;
   }

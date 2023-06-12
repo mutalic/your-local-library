@@ -44,7 +44,9 @@ function Modal({ currentBook, setShowModal }) {
           <div className="modal__lender--img"></div>
         </div>
         <div className="modal__btn--container">
-          <button className="modal__btn modal__btn--borrow">Borrow</button>
+          <button className="modal__btn modal__btn--borrow">
+            Request Lender
+          </button>
           <button
             className="modal__btn modal__btn--close"
             onClick={() => {
